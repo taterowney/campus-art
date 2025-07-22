@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMU Math + Studio Infinity Art Installation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://www.cmu.edu/favicon.ico" rel="icon">
+    <link href="https://www.cmu.edu/favicon-152.png" rel="apple-touch-icon-precomposed">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" rel="stylesheet" type="text/css">
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="https://www.cmu.edu" target="_blank">
+                <img id="cmu-logo" alt="Carnegie Mellon University" src="public/CMU_large.png" />
+            </a>
+            <a href="https://math.cmu.edu" target="_blank" id="math-dept-title">Department of Mathematics</a>
+        </div>
+        <div class="header-right">
+            <a href="https://studioinfinity.org" target="_blank">
+                <img id="si-logo" class="logo retina" src="public/StudioInfinity.png" alt="Studio Infinity logo">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h2>"Knight's Move": A mathematical art installation brought to you by the CMU Math department and Studio Infinity</h2>
+
+            <figure>
+                <img src="public/Knight444.png" alt="A rendering of the sculpture" style="max-width: 50%;">
+                <figcaption>A GeoGebra visualization of the sculpture; real photos will come shortly</figcaption>
+            </figure>
+            <h3>What is this?</h3>
+            <p>This sculpture is a mathematical <strong class="definition" id="graph-term">graph</strong> (or rather, a <strong class="definition" id="embedding-term">visual representation</strong> of one), with "edges" made from wood poles connecting the "vertices" (joints) together. You'll notice that even though the vertices are flexible, the structure stands without collapsing (so far): this graph is what's called <strong class="definition" id="rigid-term">rigid</strong>. Rigid structures are an important part of bridges, skyscrapers, and the like, where engineers often incorporate <strong class="definition" id="three-cycle-term" >triangles</strong> for structural stability due to their naturally rigid nature. Remarkably, however, this graph contains no triangles at all (trace a few edges and see for yourself!), but still holds itself up. </p>
+
+            <p>The graph's edges denote the possible moves of a knight piece from chess (2 spaces/vertices in one direction, and 1 in another), but on a 3-dimensional chessboard measuring 4 squares on each side. There are 288 such moves, which is enough to connect every space to every other. Interestingly, we can show mathematically that any large enough chessboard's squares are all accessible from any other square by enough moves of the knight (the graph is <strong class="definition" id="connected-term">connected</strong>)</p>
+
+            <p>Finding rigid graphs with edges of a single <strong class="definition" id="unitlength-term">unit length</strong> is an interesting mathematical challenge. It turns out versions of this graph (and more complex generalizations) exist for spaces of arbitrary dimension. For additional mathematical details and to view our source of inspiration for this project, please see <a class="cmu-link" href="https://arxiv.org/pdf/1808.04005" target="blank">this paper by Solymosi and White</a>.</p>
+            <div class="spacer"></div>
+            <h3>How/when will this be built?</h3>
+
+            <p>This sculpture will be constructed in its full 8ft tall glory in the afternoon of August 29, 2025, on the <a class="cmu-link" href="https://www.google.com/maps/dir//40.44247,-79.945807/@40.4425075,-79.9456699,20.94z?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D" target="blank">Wean Hall patio</a> (near the front of La Prima). If you'd like to participate, feel free to fill out the <a class="cmu-link" href="https://forms.gle/JWc4mdYsHJXYJq5c8" target="blank">interest form</a>, or just show up on the day of: we'll need all the hands we can get. There will be free food probably. </p>
+            <div class="spacer"></div>
+            <h3>Links, Info, and Thank-You's</h3>
+            <p>We'd like to extend our gratitude to Glen Whitney and the rest of <a class="cmu-link" href="https://studioinfinity.org" target="_blank">Studio Infinity</a> for the assistance in ideation, planning, and construction; to Prof. David Offner ("proffner" 😎) and the <a class="cmu-link" href="https://math.cmu.edu" target="blank">math department</a> for their support and for funding the project; and to the <a class="cmu-link" href="https://sites.google.com/andrew.cmu.edu/cmu-math-club/home" target="blank">CMU Math Club</a> and anyone else who's going to volunteer on build day. </p>
+            <div class="spacer"></div>
+            <p>This project <i>has</i> been cleared by both Campus Design and EHS. It is temporary and will be taken down before the end of the Fall semester (&lt;6 months). If you are looking for more information or have administrative concerns, please contact us by email (<span class="definition" id="email-tate">Tate Rowney</span>, <span class="definition" id="email-allison">Allison Ma</span>, <span class="definition" id="email-lou">Lou Feng</span>, <span class="definition" id="email-proffner">Dr. David Offner</span>). </p>
+            <div class="spacer"></div>
+            <p>Website designed by <a href="https://taterowney.com" target="_blank" style="text-decoration: none; font-family: 'Courier New', Courier, monospace;"><span style="background-color: #00007c; color: white; border-radius: 2px; border: 1px solid #00007c;">Tate</span><span style="color: black;">Rowney</span></span></a>
+        </article>
+    </main>
+
+    <div class="definitions-container">
+        <div id="graph-term-def">Mathematically, an (undirected) graph is a set $V$ of objects called "vertices", along with a set $E$ of unordered pairs $\{v, w\}$ for $v, w \in V$ representing "edges" or connections between vertices $v$ and $w$. Often, additional conditions are put in place (for example, no edges such that $v=w$). </div>
+        <div id="embedding-term-def">To make it more interesting, we've "embedded" this graph in 3D space ($\mathbb{R}^3$) so you can look at it. Embedding a graph $(V, E)$ in a space $S$ consists of finding an injective function $f: V \to S$ (representing which points the vertices are located at), and another injective function $g: E \to 2^S$ representing the paths our edges such that $g(\{v, w\})$ is homeomorphic to $[0, 1]$ (i.e. it's a line), and that $g(\{v, w\})$ starts at $v$, ends at $w$, and doesn't cross through any other vertices. There's usually some other requirements for $g$: for example, because we have to build it physically, edges aren't allowed to cross through each other.</div>
+        <div id="rigid-term-def">A graph $(V, E)$ embedded in $\mathbb{R}^n$ is said to be "infinitesimally rigid" if any possible movement of the graph's vertices involves only translating them by the same amount, i.e. their position relative to each other is unchanged. Mathematically, this holds if for any vector field $f: V \to \mathbb{R}^n$ such that $\forall (x, y) \in \mathbb{R}^n,$ $(f(x)-f(y)) \cdot (x-y) = 0$ (i.e. a tiny motion of the vertices), $f$ is equal to the restriction to $V$ of some other vector field $g : \mathbb{R}^n \to \mathbb{R}^n$ such that also $\forall (x, y) \in \mathbb{R}^n,$ $(g(x)-g(y)) \cdot (x-y) = 0$. </div>
+        <div id="three-cycle-term-def">In graph theory, we'd call these "3-cycles"; paths from a vertex back to itself that visit exactly three separate vertices. </div>
+        <div id="connected-term-def">A "path" between two vertices $v$ and $w$ is a sequence of vertices beginning at $v$ and ending at $w$ such that each pair of adjacent verticees in the sequence have an edge between them. A graph is "connected" if there is a path between any two vertices. </div>
+        <div id="unitlength-term-def">The length of any edge is of course relative to the embedding used (see above). A graph embedded in a metric space is called a "unit-distance graph" (sometimes called a "unit-bar framework") if the distance between any two vertices that share an edge is always the same. </div>
+        <div id="email-tate-def">trowney at andrew.cmu.edu</div>
+        <div id="email-allison-def">ama4 at andrew.cmu.edu</div>
+        <div id="email-lou-def">yufeng2 at andrew.cmu.edu</div>
+        <div id="email-proffner-def">doffner at andrew.cmu.edu</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
